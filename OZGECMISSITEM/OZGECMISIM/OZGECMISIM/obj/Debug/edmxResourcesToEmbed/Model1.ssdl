@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CVdbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Admin">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KULLANICIAD" Type="varchar" MaxLength="50" />
+    <Property Name="SIFRE" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ADRES">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TELEFON" Type="varchar" MaxLength="50" />
+    <Property Name="MAIL" Type="varchar" MaxLength="50" />
+    <Property Name="ADRES" Type="nchar" MaxLength="10" />
+    <Property Name="KONUM" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="CALISMALARIM">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ADRES" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Hakkimda">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BILGILER" Type="varchar" MaxLength="500" />
+    <Property Name="EGITIM" Type="varchar" MaxLength="500" />
+    <Property Name="DENEYIMLER" Type="varchar" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="ILETISIM">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ADSOYAD" Type="varchar" MaxLength="50" />
+    <Property Name="MAIL" Type="varchar" MaxLength="50" />
+    <Property Name="MESAJ" Type="varchar" MaxLength="500" />
+    <Property Name="KONU" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="YETENEKLERIM">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="YETENEK" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="CVdbModelStoreContainer">
+    <EntitySet Name="Admin" EntityType="Self.Admin" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ADRES" EntityType="Self.ADRES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CALISMALARIM" EntityType="Self.CALISMALARIM" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Hakkimda" EntityType="Self.Hakkimda" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ILETISIM" EntityType="Self.ILETISIM" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="YETENEKLERIM" EntityType="Self.YETENEKLERIM" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

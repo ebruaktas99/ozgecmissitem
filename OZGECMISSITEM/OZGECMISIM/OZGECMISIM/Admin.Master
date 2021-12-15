@@ -1,0 +1,51 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.Master.cs" Inherits="OZGECMISIM.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Ebru Aktaş : Admin</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+   <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="Default.aspx">ÖZGEÇMİŞİM</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="#">Eğitim Hayatım</a></li>
+      <li><a href="#">Deneyimler</a></li>
+      <li><a href="Yeteneklerim.aspx">Yeteneklerim</a></li>
+      <li><a href="Iletisim.aspx">İletişim</a></li>
+      <li><a href="istatistik.aspx">İstatistikler</a></li>
+      <li><a href="Default.aspx">Siteye Git</a></li>
+      
+    </ul>
+  </div>
+</nav>
+  
+
+
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+           
+                <div class="container">
+
+                </div>
+                
+            
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
